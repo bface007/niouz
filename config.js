@@ -128,5 +128,23 @@ module.exports = {
     },
     blacklist: {
         status: [ 'activated', 'pending']
+    },
+    comments: {
+        status: [ 'activated', 'pending', 'waiting_for_activation', 'reported', 'banished']
+    },
+    reports: {
+        status: [ 'pending', 'activated', 'rejected'],
+        types: [ 'post', 'user', 'media', 'group']
+    },
+    ads: {
+        types: []
+    },
+    groups: {
+        status: [ 'active', 'pending', 'waiting_for_activation'],
+        types: [ 'public', 'private', 'closed']
+    },
+    groupmembers: {
+        roles: [ 'user', 'moderator', 'admin'],
+        status: [ 'new', 'older']
     }
 };

@@ -86,7 +86,12 @@ var PostSchema = new mongoose.Schema({
         ref: "Group",
         childPath: "__posts",
         default: null
-    }
+    },
+    __blacklist: [{
+        type: mongoose.Schema.ObjectId,
+        ref: "Blacklist",
+        select: false
+    }]
 });
 
 // Plugin Use
