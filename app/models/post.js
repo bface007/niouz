@@ -53,14 +53,15 @@ var PostSchema = new mongoose.Schema({
     __author: {
         type: mongoose.Schema.ObjectId,
         ref: "User",
-        childPath: "__posts",
-        required: true
+        //required: true,
+        childPath: "__posts"
+
     },
     __categories:[{
         type: mongoose.Schema.ObjectId,
         ref: "Category",
-        childPath: "__posts",
-        required: true
+        //required: true
+        childPath: "__posts"
     }],
     __notes: [{
         type: mongoose.Schema.ObjectId,
@@ -78,8 +79,8 @@ var PostSchema = new mongoose.Schema({
     }],
     __cover: {
         type: mongoose.Schema.ObjectId,
-        ref: "Media",
-        required: true
+        //required: true,
+        ref: "Media"
     },
     __group: {
         type: mongoose.Schema.ObjectId,
